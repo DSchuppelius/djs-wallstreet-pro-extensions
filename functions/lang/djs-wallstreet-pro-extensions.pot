@@ -1,0 +1,164 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
+"POT-Creation-Date: 2024-02-06 23:06+0100\n"
+"PO-Revision-Date: 2024-02-05 23:27+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: extensions.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: extensions.php:52
+#, php-format
+msgid "Could not find language file %s/%s-%s.mo."
+msgstr ""
+
+#: functions.php:19
+#, php-format
+msgid "%s detected a conflict; please deactivate the plugin located in %s."
+msgstr ""
+
+#: functions/basic/iframe.php:42
+msgid "Third-party cookies"
+msgstr ""
+
+#: functions/basic/iframe.php:43
+msgid "Hint:"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:26
+msgid "Copyright and cookie settings"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:32
+msgid "Cookie settings"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:46
+#: plugin_setup_data.php:33
+msgid ""
+"This hidden content may leave traces of third-party vendors on your computer "
+"when activated. Perhaps your user behavior could be analyzed via these "
+"traces. Please confirm the execution of the content by clicking on the "
+"button. On the following pages you can view further information on the use "
+"of data on this website:"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:46
+#: plugin_setup_data.php:33
+msgid "Imprint"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:46
+#: plugin_setup_data.php:33
+msgid "Privacy policy"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:46
+#: plugin_setup_data.php:33
+msgid "Do you have any further questions on this topic? Write me via the"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:46
+#: plugin_setup_data.php:33
+msgid "contact"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:46
+#: plugin_setup_data.php:33
+msgid "contact form"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:46
+#: plugin_setup_data.php:33
+msgid "or by e-mail"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:52
+msgid "Cookietext before button"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:58
+#: plugin_setup_data.php:34
+msgid "Yes, I would like to activate the content on this page..."
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:64
+msgid "Buttontext"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:70
+#: plugin_setup_data.php:35
+msgid ""
+"Furthermore, you are aware that by activating the content, cookies can be "
+"set by third parties. In addition, you are aware that your data processing "
+"system interacts with the third-party service. This means that information "
+"from your system is transmitted to the third-party provider. If you follow "
+"the link below, cookies will probably also be set and data exchanged on the "
+"target website."
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:76
+msgid "Cookietext after button"
+msgstr ""
+
+#: functions/plugin/plugin_base.php:39 functions/plugin/plugin_base.php:44
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/shortcodes.php:27
+msgid "%y year(s) - %m month"
+msgstr ""
+
+#: includes/shortcodes_jetpack.php:28
+msgid "visits"
+msgstr ""
+
+#: includes/shortcodes_jetpack.php:30
+msgid "not enabled"
+msgstr ""
+
+#: includes/shortcodes_jetpack.php:33 includes/shortcodes_jetpack.php:58
+msgid "nonexistent"
+msgstr ""
+
+#: includes/shortcodes_jetpack.php:56
+msgid "messages"
+msgstr ""
+
+#: plugin_setup_data.php:31
+msgid "jS F Y"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "DJS-Wallstreet-Pro Extensions"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/DSchuppelius/djs-wallstreet-pro-extensions"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adds some extensions and shortcodes to theme DJS-Wallstreet-Pro"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Daniel Joerg Schuppelius"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://schuppelius.org"
+msgstr ""
