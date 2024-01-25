@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url('icon-material-design/MaterialIcons-Regular.ttf'), url('icon-material-design/MaterialIconsRound-Regular.otf'), url('icon-material-design/MaterialIconsSharp-Regular.otf'), url('icon-material-design/MaterialIconsOutlined-Regular.otf'), url('icon-material-design/MaterialIconsTwoTone-Regular.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: 400;
+    src: url('font-awesome/webfonts/fa-regular-400.ttf'), url('font-awesome/webfonts/fa-regular-400.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bootstrap Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url('bootstrap/bootstrap-icons.woff') format('woff'), url('bootstrap/bootstrap-icons.woff2') format('woff2');
+    font-display: swap;
+}
+

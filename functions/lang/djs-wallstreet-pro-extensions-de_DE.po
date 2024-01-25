@@ -1,0 +1,183 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
+"POT-Creation-Date: 2022-10-07 17:21+0200\n"
+"PO-Revision-Date: 2022-10-07 17:21+0200\n"
+"Last-Translator: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
+"Language-Team: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: angular.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: angular.php:72 angular.php:77 functions/plugin/plugin_setup.php:32
+#: functions/plugin/plugin_setup.php:37
+msgid "Cheatin&#8217; huh?"
+msgstr "Sie schummeln&#8217; oder?"
+
+#: angular.php:116
+#, php-format
+msgid "Could not find language file %s/%s-%s.mo."
+msgstr "Sprachdatei %s/%s-%s.mo konnte nicht gefunden werden."
+
+#: functions.php:19
+#, php-format
+msgid "%s detected a conflict; please deactivate the plugin located in %s."
+msgstr ""
+"%s hat einen Konflikt festgestellt; Bitte deaktivieren Sie das Plugin in %s."
+
+#: functions/customizer/childs/customizer-global.php:24
+#: functions/customizer/childs/customizer-global.php:32
+#: functions/customizer/childs/customizer-global.php:38
+msgid "AngularJS options"
+msgstr "AngularJS-Optionen"
+
+#: functions/customizer/childs/customizer-global.php:44
+msgid "Font settings"
+msgstr "Schrifteinstellungen"
+
+#: functions/customizer/childs/customizer-global.php:69
+msgid "Enable AngularJS"
+msgstr "AngularJS aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:73
+msgid ""
+"If enabled the following and enabled features are also taken into account"
+msgstr ""
+"Wenn diese Option aktiviert ist, werden auch die folgenden und aktivierten "
+"Funktionen berücksichtigt"
+
+#: functions/customizer/childs/customizer-global.php:84
+msgid "Select version of AngularJS"
+msgstr "Wählen Sie die Version von AngularJS"
+
+#: functions/customizer/childs/customizer-global.php:88
+msgid "Version 1.2.32"
+msgstr "Version 1.2.32"
+
+#: functions/customizer/childs/customizer-global.php:89
+msgid "Version 1.8.2"
+msgstr "Version 1.8.2"
+
+#: functions/customizer/childs/customizer-global.php:102
+msgid "Enable AngularJS Locale"
+msgstr "AngularJS-Gebietsschema aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:116
+msgid "Language"
+msgstr "Sprache"
+
+#: functions/customizer/childs/customizer-global.php:130
+msgid "Enable AngularJS Animate"
+msgstr "AngularJS-Animate aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:144
+msgid "Enable AngularJS Aria"
+msgstr "AngularJS-Aria aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:158
+msgid "Enable AngularJS Cookies"
+msgstr "AngularJS-Cookies aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:172
+msgid "Enable AngularJS Loader"
+msgstr "AngularJS-Loader aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:186
+msgid "Enable AngularJS Message"
+msgstr "AngularJS-Message aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:200
+msgid "Enable AngularJS Messageformat"
+msgstr "AngularJS-Messageformat aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:214
+msgid "Enable AngularJS Mocks"
+msgstr "AngularJS-Mocks aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:229
+msgid "Enable AngularJS Parse Extension"
+msgstr "AngularJS-Parse-Erweiterung aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:243
+msgid "Enable AngularJS Resource"
+msgstr "AngularJS-Ressource aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:257
+msgid "Enable AngularJS Route"
+msgstr "AngularJS-Route aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:271
+msgid "Enable AngularJS Sanitize"
+msgstr "AngularJS-Sanitize aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:285
+msgid "Enable AngularJS Scenario"
+msgstr "AngularJS-Scenario aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:289
+msgid "Only in Version 1.2.32"
+msgstr "Nur in Version 1.2.32"
+
+#: functions/customizer/childs/customizer-global.php:300
+msgid "Enable AngularJS Touch"
+msgstr "AngularJS-Touch aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:314
+msgid "Enable AngularJS UI Bootstrap"
+msgstr "AngularJS-UI Bootstrap aktivieren"
+
+#: functions/customizer/childs/customizer-global.php:330
+msgid "Fixed Home Widget Background"
+msgstr "Hintergrundfarbe des fixierten Home-Widgets"
+
+#: functions/customizer/childs/customizer-global.php:343
+msgid "Fixed Home Widget Textcolor"
+msgstr "Textfarbe des fixierten Home-Widgets"
+
+#: functions/customizer/childs/customizer-global.php:358
+msgid "Load symbolic fonts"
+msgstr "Laden symbolischer Schriftarten"
+
+#: functions/customizer/childs/customizer-global.php:362
+msgid "enable if some icons are not displayed"
+msgstr "Aktivieren, wenn einige Symbole nicht angezeigt werden"
+
+#: includes/widget-areas.php:14
+msgid "Home right fixed-sidebar"
+msgstr "Startseite rechts fixierte Sidebar"
+
+#: includes/widget-areas.php:22
+msgid "Home left fixed-sidebar"
+msgstr "Startseite links fixierte Sidebar"
+
+#. Plugin Name of the plugin/theme
+msgid "DJS-Wallstreet-Pro Extensions"
+msgstr "DJS-Wallstreet-Pro Extensions"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/DSchuppelius/djs-wallstreet-pro-extensions"
+msgstr "https://github.com/DSchuppelius/djs-wallstreet-pro-extensions"
+
+#. Description of the plugin/theme
+msgid "Adds AngularJS-Options to WordPress"
+msgstr "Fügt AngularJS-Optionen zu WordPress hinzu"
+
+#. Author of the plugin/theme
+msgid "Daniel Joerg Schuppelius"
+msgstr "Daniel Jörg Schuppelius"
+
+#. Author URI of the plugin/theme
+msgid "https://schuppelius.org"
+msgstr "https://schuppelius.org/"

@@ -1,0 +1,180 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
+"POT-Creation-Date: 2022-10-07 17:21+0200\n"
+"PO-Revision-Date: 2022-09-30 08:21+0200\n"
+"Last-Translator: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
+"Language-Team: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: angular.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: angular.php:72 angular.php:77 functions/plugin/plugin_setup.php:32
+#: functions/plugin/plugin_setup.php:37
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: angular.php:116
+#, php-format
+msgid "Could not find language file %s/%s-%s.mo."
+msgstr ""
+
+#: functions.php:19
+#, php-format
+msgid "%s detected a conflict; please deactivate the plugin located in %s."
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:24
+#: functions/customizer/childs/customizer-global.php:32
+#: functions/customizer/childs/customizer-global.php:38
+msgid "AngularJS options"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:44
+msgid "Font settings"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:69
+msgid "Enable AngularJS"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:73
+msgid ""
+"If enabled the following and enabled features are also taken into account"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:84
+msgid "Select version of AngularJS"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:88
+msgid "Version 1.2.32"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:89
+msgid "Version 1.8.2"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:102
+msgid "Enable AngularJS Locale"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:116
+msgid "Language"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:130
+msgid "Enable AngularJS Animate"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:144
+msgid "Enable AngularJS Aria"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:158
+msgid "Enable AngularJS Cookies"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:172
+msgid "Enable AngularJS Loader"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:186
+msgid "Enable AngularJS Message"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:200
+msgid "Enable AngularJS Messageformat"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:214
+msgid "Enable AngularJS Mocks"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:229
+msgid "Enable AngularJS Parse Extension"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:243
+msgid "Enable AngularJS Resource"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:257
+msgid "Enable AngularJS Route"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:271
+msgid "Enable AngularJS Sanitize"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:285
+msgid "Enable AngularJS Scenario"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:289
+msgid "Only in Version 1.2.32"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:300
+msgid "Enable AngularJS Touch"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:314
+msgid "Enable AngularJS UI Bootstrap"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:330
+msgid "Fixed Home Widget Background"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:343
+msgid "Fixed Home Widget Textcolor"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:358
+msgid "Load symbolic fonts"
+msgstr ""
+
+#: functions/customizer/childs/customizer-global.php:362
+msgid "enable if some icons are not displayed"
+msgstr ""
+
+#: includes/widget-areas.php:14
+msgid "Home right fixed-sidebar"
+msgstr ""
+
+#: includes/widget-areas.php:22
+msgid "Home left fixed-sidebar"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "DJS-Wallstreet-Pro Extensions"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/DSchuppelius/djs-wallstreet-pro-extensions"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adds AngularJS-Options to WordPress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Daniel Joerg Schuppelius"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://schuppelius.org"
+msgstr ""
