@@ -16,7 +16,7 @@ function extensions_plugin_styles() {
     }
 
     wp_enqueue_style("extensions-font",                      DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font.css");
-}
+    }
 add_action('wp_enqueue_scripts', 'extensions_plugin_styles');
 
 function extensions_plugin_scripts() {
@@ -24,8 +24,10 @@ function extensions_plugin_scripts() {
 
     if (!(defined("WP_ADMIN") && WP_ADMIN) && $current_setup->get("extensions_enabled")) {
         //TODO: Add Code
-    }
-}
+        }
+        if ($current_setup->get("angular_animate_enabled")) {
+            wp_enqueue_script("angularjs-animate",          DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/angularjs/" . $current_setup->get("angularjs_version") . "/angular-animate.min.js");
+        }
 add_action('wp_enqueue_scripts', 'extensions_plugin_scripts');
 
 

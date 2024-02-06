@@ -24,3 +24,15 @@
     font-family: 'Material Icons';
 }
 
+/* Widgetarea */
+.wallstreet.fixed-widget {
+    font-size: 1em
+}
+
+    .wallstreet.fixed-widget button {
+        font-size: 1em
+    }
+
+    .wallstreet.fixed-widget > div a {
+        font-size: 1em
+    }

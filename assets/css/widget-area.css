@@ -1,0 +1,110 @@
+.wallstreet.fixed-widget {
+    display: flex;
+    align-items: stretch;
+    transition: all 1.5s ease;
+    position: fixed;
+    top: 30%;
+    max-width: 200px;
+    z-index: 901;
+    background-color: #ccc;
+    background-color: rgba(204, 204, 204, 0.50);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: solid #666 1px;
+    border-radius: 0.35em;
+    backdrop-filter: blur(5px);
+    color: #fff
+}
+
+    .wallstreet.fixed-widget button {
+        background-color: #686868;
+        background-color: rgba(104,104,104,0.15);
+        backdrop-filter: blur(10px);
+        border: none;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        width: 5px;
+        line-height: 210px;
+        box-shadow: none
+    }
+
+        .wallstreet.fixed-widget button:hover,
+        .wallstreet.fixed-widget > div a:hover {
+            color: #fff;
+            text-decoration: none
+        }
+
+    .wallstreet.fixed-widget > button > i {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        width: 20px
+    }
+
+    .wallstreet.fixed-widget > div {
+        overflow: auto;
+        word-wrap: break-word;
+        width: 175px;
+        display: flex;
+        justify-content: center;
+        flex: content
+    }
+
+        .wallstreet.fixed-widget > div a {
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            box-shadow: none
+        }
+
+        .wallstreet.fixed-widget > div > a > i {
+            margin: 10px
+        }
+
+    .wallstreet.fixed-widget.right {
+        right: -175px;
+        padding-left: 5px
+    }
+
+        .wallstreet.fixed-widget.right button {
+            margin-left: -5px
+        }
+
+            .wallstreet.fixed-widget.right button:hover,
+            .wallstreet.fixed-widget.right > div:hover {
+                box-shadow: inset 60px 75px 100px 10px rgb(0 0 0 / 25%)
+            }
+
+        .wallstreet.fixed-widget.right > div {
+            float: right;
+            padding: 15px 5px 15px 0px;
+            margin-left: 10px
+        }
+
+    .wallstreet.fixed-widget.left {
+        left: -175px;
+        padding-right: 5px
+    }
+
+        .wallstreet.fixed-widget.left button {
+            margin-right: -5px
+        }
+
+            .wallstreet.fixed-widget.left button > i {
+                margin-left: -25px
+            }
+
+        .wallstreet.fixed-widget.left > button {
+            float: right;
+        }
+
+        .wallstreet.fixed-widget.left > div {
+            padding: 15px 0px 15px 5px;
+            margin-right: 10px
+        }
+
+            .wallstreet.fixed-widget.left button:hover,
+            .wallstreet.fixed-widget.left > div:hover {
+                box-shadow: inset 60px 75px 100px 10px rgb(0 0 0 / 25%)
+            }
