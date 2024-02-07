@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
-"POT-Creation-Date: 2024-02-06 23:06+0100\n"
+"POT-Creation-Date: 2024-02-07 08:02+0100\n"
 "PO-Revision-Date: 2024-02-05 23:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -39,6 +39,10 @@ msgstr ""
 msgid "Hint:"
 msgstr ""
 
+#: functions/basic/jscript.php:28
+msgid "Third-party scripts"
+msgstr ""
+
 #: functions/customizer/childs/customizer-copyright.php:26
 msgid "Copyright and cookie settings"
 msgstr ""
@@ -47,7 +51,11 @@ msgstr ""
 msgid "Cookie settings"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:46
+#: functions/customizer/childs/customizer-copyright.php:38
+msgid "Thirdparty Script settings"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:51
 #: plugin_setup_data.php:33
 msgid ""
 "This hidden content may leave traces of third-party vendors on your computer "
@@ -57,50 +65,50 @@ msgid ""
 "of data on this website:"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "Imprint"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "Privacy policy"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "Do you have any further questions on this topic? Write me via the"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "contact"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "contact form"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "or by e-mail"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:52
+#: functions/customizer/childs/customizer-copyright.php:57
 msgid "Cookietext before button"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:58
+#: functions/customizer/childs/customizer-copyright.php:63
 #: plugin_setup_data.php:34
 msgid "Yes, I would like to activate the content on this page..."
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:64
+#: functions/customizer/childs/customizer-copyright.php:69
 msgid "Buttontext"
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:70
+#: functions/customizer/childs/customizer-copyright.php:75
 #: plugin_setup_data.php:35
 msgid ""
 "Furthermore, you are aware that by activating the content, cookies can be "
@@ -111,8 +119,30 @@ msgid ""
 "target website."
 msgstr ""
 
-#: functions/customizer/childs/customizer-copyright.php:76
+#: functions/customizer/childs/customizer-copyright.php:81
 msgid "Cookietext after button"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:87
+msgid "Load scripts question"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:93
+#: plugin_setup_data.php:38
+msgid "Yes, I would like to activate the external scripts on this page..."
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:99
+msgid "Load external Skripts"
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:105
+#: plugin_setup_data.php:39
+msgid "No, I do not like to activate the external scripts on this page..."
+msgstr ""
+
+#: functions/customizer/childs/customizer-copyright.php:111
+msgid "No external Skripts"
 msgstr ""
 
 #: functions/plugin/plugin_base.php:39 functions/plugin/plugin_base.php:44
@@ -141,6 +171,17 @@ msgstr ""
 
 #: plugin_setup_data.php:31
 msgid "jS F Y"
+msgstr ""
+
+#: plugin_setup_data.php:37
+msgid ""
+"This site uses third-party program code that may allow conclusions to be "
+"drawn about your user behavior. Some of these program codes are loaded from "
+"external servers. We use this code to determine what content is of interest "
+"to you or to make the behavior and appearance of this website more pleasant "
+"for you. Would you like to support us and unlock these external scripts and "
+"styles? You can find more information about the use of data on these "
+"websites on the following pages:"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

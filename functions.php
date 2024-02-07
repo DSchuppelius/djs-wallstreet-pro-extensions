@@ -28,6 +28,7 @@ require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_setup.php");
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_sanitizer.php");
 
 require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/iframe.php";
+require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/jscript.php";
 
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/customizer.php");
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/childs/customizer-copyright.php");

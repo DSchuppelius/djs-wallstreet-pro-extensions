@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
-"POT-Creation-Date: 2024-02-06 23:06+0100\n"
-"PO-Revision-Date: 2024-02-06 23:07+0100\n"
+"POT-Creation-Date: 2024-02-07 08:02+0100\n"
+"PO-Revision-Date: 2024-02-07 08:03+0100\n"
 "Last-Translator: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
 "Language-Team: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
 "Language: de_DE\n"
@@ -40,6 +40,10 @@ msgstr "Cookies von Drittanbietern"
 msgid "Hint:"
 msgstr "Hinweis:"
 
+#: functions/basic/jscript.php:28
+msgid "Third-party scripts"
+msgstr "Skripte von Drittanbietern"
+
 #: functions/customizer/childs/customizer-copyright.php:26
 msgid "Copyright and cookie settings"
 msgstr "Einstellungen (Copyright- und Cookies)"
@@ -48,7 +52,11 @@ msgstr "Einstellungen (Copyright- und Cookies)"
 msgid "Cookie settings"
 msgstr "Cookieeinstellungen"
 
-#: functions/customizer/childs/customizer-copyright.php:46
+#: functions/customizer/childs/customizer-copyright.php:38
+msgid "Thirdparty Script settings"
+msgstr "Einstellungen für Skripte von Drittanbietern"
+
+#: functions/customizer/childs/customizer-copyright.php:51
 #: plugin_setup_data.php:33
 msgid ""
 "This hidden content may leave traces of third-party vendors on your computer "
@@ -64,51 +72,51 @@ msgstr ""
 "den folgenden Seiten k&ouml;nnen Sie weitere Informationen zur Datennutzung "
 "auf dieser Website einsehen:"
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "Imprint"
 msgstr "Impressum"
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "Privacy policy"
 msgstr "Datenschutzerkl&auml;rung"
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "Do you have any further questions on this topic? Write me via the"
 msgstr ""
 "Haben Sie weitere Fragen zu diesem Thema? Schreiben Sie mir &uuml;ber das"
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "contact"
 msgstr "Kontakt"
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "contact form"
 msgstr "Kontaktformular"
 
-#: functions/customizer/childs/customizer-copyright.php:46
-#: plugin_setup_data.php:33
+#: functions/customizer/childs/customizer-copyright.php:51
+#: plugin_setup_data.php:33 plugin_setup_data.php:37
 msgid "or by e-mail"
 msgstr "oder per E-Mail"
 
-#: functions/customizer/childs/customizer-copyright.php:52
+#: functions/customizer/childs/customizer-copyright.php:57
 msgid "Cookietext before button"
 msgstr "Mitteilung vor Cookie-Schaltfläche"
 
-#: functions/customizer/childs/customizer-copyright.php:58
+#: functions/customizer/childs/customizer-copyright.php:63
 #: plugin_setup_data.php:34
 msgid "Yes, I would like to activate the content on this page..."
 msgstr "Ja, ich m&ouml;chte den Inhalt auf dieser Seite aktivieren..."
 
-#: functions/customizer/childs/customizer-copyright.php:64
+#: functions/customizer/childs/customizer-copyright.php:69
 msgid "Buttontext"
 msgstr "Schaltflächentext"
 
-#: functions/customizer/childs/customizer-copyright.php:70
+#: functions/customizer/childs/customizer-copyright.php:75
 #: plugin_setup_data.php:35
 msgid ""
 "Furthermore, you are aware that by activating the content, cookies can be "
@@ -126,9 +134,32 @@ msgstr ""
 "wahrscheinlich auch Cookies gesetzt und Daten auf der Zielwebsite "
 "ausgetauscht."
 
-#: functions/customizer/childs/customizer-copyright.php:76
+#: functions/customizer/childs/customizer-copyright.php:81
 msgid "Cookietext after button"
 msgstr "Mitteilung nach Cookieschaltfläche"
+
+#: functions/customizer/childs/customizer-copyright.php:87
+msgid "Load scripts question"
+msgstr "Frage zum Laden von Skripten"
+
+#: functions/customizer/childs/customizer-copyright.php:93
+#: plugin_setup_data.php:38
+msgid "Yes, I would like to activate the external scripts on this page..."
+msgstr "Ja, ich möchte die externen Skripte auf dieser Seite aktivieren..."
+
+#: functions/customizer/childs/customizer-copyright.php:99
+msgid "Load external Skripts"
+msgstr "Externe Skripte laden"
+
+#: functions/customizer/childs/customizer-copyright.php:105
+#: plugin_setup_data.php:39
+msgid "No, I do not like to activate the external scripts on this page..."
+msgstr ""
+"Nein, ich möchte die externen Skripte auf dieser Seite nicht aktivieren..."
+
+#: functions/customizer/childs/customizer-copyright.php:111
+msgid "No external Skripts"
+msgstr "Keine externen Skripte"
 
 #: functions/plugin/plugin_base.php:39 functions/plugin/plugin_base.php:44
 msgid "Cheatin&#8217; huh?"
@@ -157,6 +188,25 @@ msgstr "Nachrichten"
 #: plugin_setup_data.php:31
 msgid "jS F Y"
 msgstr "d. F Y"
+
+#: plugin_setup_data.php:37
+msgid ""
+"This site uses third-party program code that may allow conclusions to be "
+"drawn about your user behavior. Some of these program codes are loaded from "
+"external servers. We use this code to determine what content is of interest "
+"to you or to make the behavior and appearance of this website more pleasant "
+"for you. Would you like to support us and unlock these external scripts and "
+"styles? You can find more information about the use of data on these "
+"websites on the following pages:"
+msgstr ""
+"Diese Seite verwendet Programmcode von Drittanbietern, der evtl. "
+"Rückschlüsse auf Ihr Nutzerverhalten zulassen könnte. Einige von diesen "
+"Programmcodes werden von externen Servern geladen. Wir verwenden diesen "
+"Code, um festzustellen, welche Inhalte für Sie von Interesse sind oder das "
+"Verhalten und Aussehen dieser Webseite für Sie angenehmer zu gestalten. "
+"Möchten Sie uns dabei unterstützen und diese externen Skripte und Styles "
+"freischalten? Auf den folgenden Seiten können Sie weitere Informationen zur "
+"Datennutzung auf dieser Webseite einsehen:"
 
 #. Plugin Name of the plugin/theme
 msgid "DJS-Wallstreet-Pro Extensions"
