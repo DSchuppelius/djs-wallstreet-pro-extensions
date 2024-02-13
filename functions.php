@@ -25,6 +25,7 @@ require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "base/web_functions.php";
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_base.php");
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_setup.php");
 
+require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_functions.php");
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_sanitizer.php");
 
 require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/iframe.php";
