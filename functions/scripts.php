@@ -16,6 +16,8 @@ function extensions_plugin_styles() {
     }
 
     wp_enqueue_style("extensions-font",                      DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font.css");
+
+    //if()
     }
 add_action('wp_enqueue_scripts', 'extensions_plugin_styles');
 

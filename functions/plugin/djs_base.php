@@ -1,14 +1,16 @@
 <?php
 /*
- * Created on   : Fri Oct 07 2022
+ * Created on   : Wed Jun 22 2022
  * Author       : Daniel Jörg Schuppelius
  * Author Uri   : https://schuppelius.org
- * Filename     : plugin_base.php
+ * Filename     : djs_base.php
  * License      : GNU General Public License v3 or later
  * License Uri  : http://www.gnu.org/licenses/gpl.html
  */
-if (!class_exists('Plugin_Base')) {
-    abstract class Plugin_Base {
+defined('ABSPATH') or die('Hm, Are you ok?');
+
+if(!class_exists('DJS_Base')) {
+    abstract class DJS_Base {
         protected $data;
 
         // @var mixed False when not logged in; WP_User object when logged in
@@ -29,19 +31,25 @@ if (!class_exists('Plugin_Base')) {
         // @return plugin|null
         abstract public static function instance();
 
-        // A dummy constructor to prevent plugin from being loaded more than once.
+        /**
+         * A dummy constructor to prevent plugin from being loaded more than once.
+         *
+         * @since Theme_Base (v2.0.4)
+         * @see Theme_Base::instance()
+         * @see plugin();
+         */
         protected function __construct() {
             /* Do nothing here */
         }
 
         // A dummy magic method to prevent plugin from being cloned
         public function __clone() {
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', DJS_EXTENSIONS_PLUGIN), '1.0.0');
+            _doing_it_wrong(__FUNCTION__, esc_html__('Cheatin&#8217; huh?', 'djs-wallstreet-pro'), '2.1.0');
         }
 
         // A dummy magic method to prevent plugin from being unserialized
         public function __wakeup() {
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', DJS_EXTENSIONS_PLUGIN), '1.0.0');
+            _doing_it_wrong(__FUNCTION__, esc_html__('Cheatin&#8217; huh?', 'djs-wallstreet-pro'), '2.1.0');
         }
 
         // Magic method for checking the existence of a certain custom field
@@ -71,3 +79,4 @@ if (!class_exists('Plugin_Base')) {
         }
     }
 }
+?>

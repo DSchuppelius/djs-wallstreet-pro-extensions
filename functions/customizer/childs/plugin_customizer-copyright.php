@@ -7,18 +7,7 @@
  * License      : GNU General Public License v3 or later
  * License Uri  : http://www.gnu.org/licenses/gpl.html
  */
-class Customizer_Wallstreet_Pro_Extensions extends Theme_Customizer {
-    public $is_djs_wallstreet_pro_theme;
-
-    public function __construct() {
-        parent::__construct();
-        $wallstreet_theme = wp_get_theme("DJS-Wallstreet-Pro");
-        $current_theme = wp_get_theme();
-
-        $this->is_djs_wallstreet_pro_theme = $wallstreet_theme->Name == $current_theme->Name;
-        $this->register_panel = !$this->is_djs_wallstreet_pro_theme;
-    }
-
+class Customizer_Wallstreet_Pro_Extensions extends Plugin_Customizer {
     public function customize_register_panel($wp_customize) {
         $wp_customize->add_panel("wallstreet_copyright_setting", [
             "priority" => 900,
