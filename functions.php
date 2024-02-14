@@ -31,6 +31,7 @@ require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/iframe.php";
 require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/jscript.php";
 
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/plugin_customizer.php");
+require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/childs/plugin_customizer-global.php");
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/childs/plugin_customizer-copyright.php");
 
 require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "scripts.php");

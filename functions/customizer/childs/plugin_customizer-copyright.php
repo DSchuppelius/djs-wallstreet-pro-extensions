@@ -7,7 +7,7 @@
  * License      : GNU General Public License v3 or later
  * License Uri  : http://www.gnu.org/licenses/gpl.html
  */
-class Customizer_Wallstreet_Pro_Extensions extends Plugin_Customizer {
+class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
     public function customize_register_panel($wp_customize) {
         $wp_customize->add_panel("wallstreet_copyright_setting", [
             "priority" => 900,

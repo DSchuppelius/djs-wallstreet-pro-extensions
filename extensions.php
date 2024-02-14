@@ -75,7 +75,8 @@ if (!class_exists('DJS_Wallstreet_Pro_Extensions')) {
         }
 
         private function setup_actions() {
-            $this->customizers["cookies"] = new Customizer_Wallstreet_Pro_Extensions();
+            $this->customizers["global"] = new Plugin_Extension_Global_Customizer();
+            $this->customizers["cookies"] = new Plugin_Extension_Copyright_Customizer();
 
             foreach($this->customizers as $customizer){
                 $customizer->register();

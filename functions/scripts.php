@@ -15,14 +15,17 @@ function extensions_plugin_styles() {
         wp_enqueue_style("icon_font-faces",                 DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/icon_font-faces.css");
     }
 
-    wp_enqueue_style("extensions-font",                      DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font.css");
+    wp_enqueue_style("extensions-font",                     DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font.css");
 
-    //if()
+    wp_enqueue_style("extensions-popup",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/popup.css");
     }
 add_action('wp_enqueue_scripts', 'extensions_plugin_styles');
 
 function extensions_plugin_scripts() {
     $current_setup = Extensions_Plugin_Setup::instance();
+
+    wp_enqueue_script("page",                               DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "/js/popup.js", ["jquery"]);
+
 
     if (!(defined("WP_ADMIN") && WP_ADMIN) && $current_setup->get("extensions_enabled")) {
         //TODO: Add Code
