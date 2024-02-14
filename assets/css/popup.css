@@ -16,6 +16,7 @@
 }
 
     #script_fullscreen h3 {
+        padding: 15px 0px;
         margin-left: 20px;
         margin-right: 70px
     }
@@ -44,6 +45,13 @@
     #script_fullscreen.open {
         transform: translate(0px,0px) scale(1,1);
         opacity: 1
+    }
+
+    #script_fullscreen .title_row {
+        margin-top: -29px;
+        border-top-right-radius: 0.35em;
+        border-top-left-radius: 0.35em;
+        background-color: rgba(255, 255, 255, 0.70)
     }
 
     #script_fullscreen .center {

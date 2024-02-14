@@ -25,7 +25,7 @@ add_action("wp_enqueue_scripts", "script_cookie_lazy_load", 15);
 function show_scriptconsent(){
     $current_setup = Extensions_Plugin_Setup::instance();
     $actual_link = get_the_currentURL();
-    echo '<div id="script_fullscreen" class="open"><h3>'. esc_html__("Third-party scripts", DJS_EXTENSIONS_PLUGIN).'</h3><button type="button" class="not close material-icons">close</button><p>' . mb_convert_encoding($current_setup->get("script_before"), 'HTML-ENTITIES') . '</p>';
+    echo '<div id="script_fullscreen" class="open"><div class="title_row"><h3>'. esc_html__("Third-party scripts", DJS_EXTENSIONS_PLUGIN).'</h3><button type="button" class="not close material-icons">close</button></div><p>' . mb_convert_encoding($current_setup->get("script_before"), 'HTML-ENTITIES') . '</p>';
     echo '<form class="script center" action="' . $actual_link . '"><button class="btn ok" onclick="document.cookie=\'scriptconsent_estatus=allow;path=/;SameSite=Lax\'; location.reload(true);" type="button">' . mb_convert_encoding($current_setup->get("script_link"), 'HTML-ENTITIES') . '</button> <button class="btn no" onclick="document.cookie=\'scriptconsent_estatus=dismiss;path=/;SameSite=Lax\'; location.reload(true);" type="button">' . mb_convert_encoding($current_setup->get("noscript_link"), 'HTML-ENTITIES') . '</button></form>';
     echo "</div>";
 }
