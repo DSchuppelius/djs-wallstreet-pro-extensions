@@ -25,12 +25,12 @@ function jetpack_bruteforce_counter($atts, $content=null) {
 
     if(is_plugin_active('jetpack/jetpack.php')) {
         if (Jetpack::is_module_active('protect')) {
-            $result .= esc_html(number_format_i18n(get_site_option('jetpack_protect_blocked_attempts', 0))) . " " . esc_html__("visits", "djs-wallstreet-pro");
+            $result .= esc_html(number_format_i18n(get_site_option('jetpack_protect_blocked_attempts', 0))) . " " . esc_html__("visits", DJS_EXTENSIONS_PLUGIN);
         } else {
-            $result .= esc_html__("not enabled", "djs-wallstreet-pro");
+            $result .= esc_html__("not enabled", DJS_EXTENSIONS_PLUGIN);
         }
     } else {
-        $result .= esc_html__("nonexistent", "djs-wallstreet-pro");
+        $result .= esc_html__("nonexistent", DJS_EXTENSIONS_PLUGIN);
     }
 
     return $result . "</li></ul></div>";
@@ -53,9 +53,9 @@ function akismet_spam_counter($atts, $content=null) {
     if(!empty($content)) $result .= $content;
 
     if(is_plugin_active('akismet/akismet.php')) {
-        $result .= esc_html(number_format_i18n(get_site_option('akismet_spam_count', 0))) . " " . esc_html__("messages", "djs-wallstreet-pro");
+        $result .= esc_html(number_format_i18n(get_site_option('akismet_spam_count', 0))) . " " . esc_html__("messages", DJS_EXTENSIONS_PLUGIN);
     } else {
-        $result .= esc_html__("nonexistent", "djs-wallstreet-pro");
+        $result .= esc_html__("nonexistent", DJS_EXTENSIONS_PLUGIN);
     }
 
     return $result . "</li></ul></div>";
