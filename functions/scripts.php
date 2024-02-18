@@ -17,6 +17,7 @@ function extensions_plugin_styles() {
 
     wp_enqueue_style("extensions-font",                     DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font.css");
 
+    wp_enqueue_style("extensions-embed",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/embed.css");
     wp_enqueue_style("extensions-popup",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/popup.css");
     }
 add_action('wp_enqueue_scripts', 'extensions_plugin_styles');
