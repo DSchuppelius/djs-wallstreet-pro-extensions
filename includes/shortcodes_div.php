@@ -120,3 +120,24 @@ function zdf_media($atts, $content = null) {
     return $result;
 }
 add_shortcode("zdf", "zdf_media");
+
+function iframe_media($atts, $content = null) {
+    $result = "<div>no content</div>";
+    extract(shortcode_atts([
+        "src" => "",
+    ], $atts));
+
+    if(!empty($src))
+        $result =
+            '<figure class="wp-block-embed is-type-page is-provider-unknown wp-block-embed-page wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                <div class="wp-block-embed__wrapper">
+                    <span class="embed-iframe" style="text-align:center; display: block;">
+                        <iframe loading="lazy" class="iframe" width="600" height="338" src="' . $src . '" allowfullscreen="true" style="border:0;" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"></iframe>
+                    </span>
+                </div>
+                <figcaption>'. do_shortcode($content) .'</figcaption>
+            </figure>';
+
+    return $result;
+}
+add_shortcode("iframe", "iframe_media");
