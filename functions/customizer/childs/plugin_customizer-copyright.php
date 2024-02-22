@@ -12,7 +12,7 @@ class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
         $wp_customize->add_panel("wallstreet_copyright_setting", [
             "priority" => 900,
             "capability" => "edit_theme_options",
-            "title" => esc_html__("Copyright and cookie settings", DJS_EXTENSIONS_PLUGIN),
+            "title" => esc_html__("Copyright and disclaimer settings", DJS_EXTENSIONS_PLUGIN),
         ]);
     }
 
@@ -35,6 +35,21 @@ class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
 
         if($this->is_djs_wallstreet_pro_theme)
             $current_setup = DJS_Wallstreet_Pro_Theme_Setup::instance();
+
+        $wp_customize->add_setting($this->theme_options_name . "[cookieconsent_enabled]", [
+            "default" => false,
+            "capability" => "edit_theme_options",
+            "sanitize_callback" => "sanitize_boolean_field",
+            "type" => "option",
+        ]);
+
+        $wp_customize->add_control($this->theme_options_name . "[cookieconsent_enabled]", [
+            "label" => esc_html__("Enable cookie consent", DJS_EXTENSIONS_PLUGIN),
+            "section" => "cookie_section",
+            "type" => "checkbox",
+            "priority" => 100,
+            "description" => esc_html__("enable if you want a cookie disclaimer on iframe media", DJS_EXTENSIONS_PLUGIN),
+        ]);
 
         $wp_customize->add_setting($this->theme_options_name . "[cookie_before]", [
             "default" => esc_html__("This hidden content may leave traces of third-party vendors on your computer when activated. Perhaps your user behavior could be analyzed via these traces. Please confirm the execution of the content by clicking on the button. On the following pages you can view further information on the use of data on this website:", DJS_EXTENSIONS_PLUGIN) . ' <a href="/' . urlencode(strtolower(esc_html__("Imprint", DJS_EXTENSIONS_PLUGIN))) . '">' . esc_html__("Imprint", DJS_EXTENSIONS_PLUGIN) . '</a>, <a href="/' . urlencode(remove_umlaut(strtolower(esc_html__("Privacy policy", DJS_EXTENSIONS_PLUGIN)))) . '">' . esc_html__("Privacy policy", DJS_EXTENSIONS_PLUGIN) . '</a>. ' . esc_html__("Do you have any further questions on this topic? Write me via the", DJS_EXTENSIONS_PLUGIN).' <a href="/' . urlencode(strtolower(esc_html__("contact", DJS_EXTENSIONS_PLUGIN))) . '">' . esc_html__("contact form", DJS_EXTENSIONS_PLUGIN) . '</a> ' . esc_html__("or by e-mail", DJS_EXTENSIONS_PLUGIN) . ' (<a href="mailto:' . $current_setup->get("contact_email_number_one") . '" >' . $current_setup->get("contact_email_number_one") . "</a>)",
@@ -70,6 +85,21 @@ class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
             "label" => esc_html__("Cookietext after button", DJS_EXTENSIONS_PLUGIN),
             "section" => "cookie_section",
             "type" => "textarea",
+        ]);
+
+        $wp_customize->add_setting($this->theme_options_name . "[scriptconsent_enabled]", [
+            "default" => false,
+            "capability" => "edit_theme_options",
+            "sanitize_callback" => "sanitize_boolean_field",
+            "type" => "option",
+        ]);
+
+        $wp_customize->add_control($this->theme_options_name . "[scriptconsent_enabled]", [
+            "label" => esc_html__("Enable script consent", DJS_EXTENSIONS_PLUGIN),
+            "section" => "script_section",
+            "type" => "checkbox",
+            "priority" => 100,
+            "description" => esc_html__("enable if you want a disclaimer on external scripts", DJS_EXTENSIONS_PLUGIN),
         ]);
 
         $wp_customize->add_setting($this->theme_options_name . "[script_before]", [

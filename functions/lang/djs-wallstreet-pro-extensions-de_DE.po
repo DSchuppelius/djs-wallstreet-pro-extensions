@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
-"POT-Creation-Date: 2024-02-17 23:59+0100\n"
-"PO-Revision-Date: 2024-02-18 00:05+0100\n"
+"POT-Creation-Date: 2024-02-22 10:02+0100\n"
+"PO-Revision-Date: 2024-02-22 10:04+0100\n"
 "Last-Translator: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
 "Language-Team: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
 "Language: de_DE\n"
@@ -40,13 +40,13 @@ msgstr "Cookies von Drittanbietern"
 msgid "Hint:"
 msgstr "Hinweis:"
 
-#: functions/basic/jscript.php:28
+#: functions/basic/jscript.php:30
 msgid "Third-party scripts"
 msgstr "Skripte von Drittanbietern"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:15
-msgid "Copyright and cookie settings"
-msgstr "Einstellungen (Copyright- und Cookies)"
+msgid "Copyright and disclaimer settings"
+msgstr "Einstellungen (Copyright- und Verzichtserkärungen)"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:21
 msgid "Cookie settings"
@@ -56,8 +56,18 @@ msgstr "Cookieeinstellungen"
 msgid "Thirdparty Script settings"
 msgstr "Einstellungen für Skripte von Drittanbietern"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:40
-#: plugin_setup_data.php:35
+#: functions/customizer/childs/plugin_customizer-copyright.php:47
+msgid "Enable cookie consent"
+msgstr "Cookie-Einwilligung aktivieren"
+
+#: functions/customizer/childs/plugin_customizer-copyright.php:51
+msgid "enable if you want a cookie disclaimer on iframe media"
+msgstr ""
+"Aktivieren Sie diese Option, wenn Sie einen Cookie-Disclaimer auf iFrame-"
+"Medien wünschen"
+
+#: functions/customizer/childs/plugin_customizer-copyright.php:55
+#: plugin_setup_data.php:38
 msgid ""
 "This hidden content may leave traces of third-party vendors on your computer "
 "when activated. Perhaps your user behavior could be analyzed via these "
@@ -72,58 +82,58 @@ msgstr ""
 "den folgenden Seiten k&ouml;nnen Sie weitere Informationen zur Datennutzung "
 "auf dieser Website einsehen:"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:40
-#: functions/customizer/childs/plugin_customizer-copyright.php:76
-#: plugin_setup_data.php:35 plugin_setup_data.php:39
+#: functions/customizer/childs/plugin_customizer-copyright.php:55
+#: functions/customizer/childs/plugin_customizer-copyright.php:106
+#: plugin_setup_data.php:38 plugin_setup_data.php:42
 msgid "Imprint"
 msgstr "Impressum"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:40
-#: functions/customizer/childs/plugin_customizer-copyright.php:76
-#: plugin_setup_data.php:35 plugin_setup_data.php:39
+#: functions/customizer/childs/plugin_customizer-copyright.php:55
+#: functions/customizer/childs/plugin_customizer-copyright.php:106
+#: plugin_setup_data.php:38 plugin_setup_data.php:42
 msgid "Privacy policy"
 msgstr "Datenschutzerkl&auml;rung"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:40
-#: functions/customizer/childs/plugin_customizer-copyright.php:76
-#: plugin_setup_data.php:35 plugin_setup_data.php:39
+#: functions/customizer/childs/plugin_customizer-copyright.php:55
+#: functions/customizer/childs/plugin_customizer-copyright.php:106
+#: plugin_setup_data.php:38 plugin_setup_data.php:42
 msgid "Do you have any further questions on this topic? Write me via the"
 msgstr ""
 "Haben Sie weitere Fragen zu diesem Thema? Schreiben Sie mir &uuml;ber das"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:40
-#: functions/customizer/childs/plugin_customizer-copyright.php:76
-#: plugin_setup_data.php:35 plugin_setup_data.php:39
+#: functions/customizer/childs/plugin_customizer-copyright.php:55
+#: functions/customizer/childs/plugin_customizer-copyright.php:106
+#: plugin_setup_data.php:38 plugin_setup_data.php:42
 msgid "contact"
 msgstr "Kontakt"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:40
-#: functions/customizer/childs/plugin_customizer-copyright.php:76
-#: plugin_setup_data.php:35 plugin_setup_data.php:39
+#: functions/customizer/childs/plugin_customizer-copyright.php:55
+#: functions/customizer/childs/plugin_customizer-copyright.php:106
+#: plugin_setup_data.php:38 plugin_setup_data.php:42
 msgid "contact form"
 msgstr "Kontaktformular"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:40
-#: functions/customizer/childs/plugin_customizer-copyright.php:76
-#: plugin_setup_data.php:35 plugin_setup_data.php:39
+#: functions/customizer/childs/plugin_customizer-copyright.php:55
+#: functions/customizer/childs/plugin_customizer-copyright.php:106
+#: plugin_setup_data.php:38 plugin_setup_data.php:42
 msgid "or by e-mail"
 msgstr "oder per E-Mail"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:46
+#: functions/customizer/childs/plugin_customizer-copyright.php:61
 msgid "Cookietext before button"
 msgstr "Mitteilung vor Cookie-Schaltfläche"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:52
-#: plugin_setup_data.php:36
+#: functions/customizer/childs/plugin_customizer-copyright.php:67
+#: plugin_setup_data.php:39
 msgid "Yes, I would like to activate the content on this page..."
 msgstr "Ja, ich m&ouml;chte den Inhalt auf dieser Seite aktivieren..."
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:58
+#: functions/customizer/childs/plugin_customizer-copyright.php:73
 msgid "Buttontext"
 msgstr "Schaltflächentext"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:64
-#: plugin_setup_data.php:37
+#: functions/customizer/childs/plugin_customizer-copyright.php:79
+#: plugin_setup_data.php:40
 msgid ""
 "Furthermore, you are aware that by activating the content, cookies can be "
 "set by third parties. In addition, you are aware that your data processing "
@@ -140,12 +150,22 @@ msgstr ""
 "wahrscheinlich auch Cookies gesetzt und Daten auf der Zielwebsite "
 "ausgetauscht."
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:70
+#: functions/customizer/childs/plugin_customizer-copyright.php:85
 msgid "Cookietext after button"
 msgstr "Mitteilung nach Cookieschaltfläche"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:76
-#: plugin_setup_data.php:39
+#: functions/customizer/childs/plugin_customizer-copyright.php:98
+msgid "Enable script consent"
+msgstr "Aktivieren der Skripteinwilligung"
+
+#: functions/customizer/childs/plugin_customizer-copyright.php:102
+msgid "enable if you want a disclaimer on external scripts"
+msgstr ""
+"Aktivieren Sie diese Option, wenn Sie einen Haftungsausschluss für externe "
+"Skripte verwenden möchten"
+
+#: functions/customizer/childs/plugin_customizer-copyright.php:106
+#: plugin_setup_data.php:42
 msgid ""
 "This site uses third-party program code that may allow conclusions to be "
 "drawn about your user behavior. Some of these program codes are loaded from "
@@ -164,26 +184,26 @@ msgstr ""
 "freischalten? Auf den folgenden Seiten können Sie weitere Informationen zur "
 "Datennutzung auf dieser Webseite einsehen:"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:82
+#: functions/customizer/childs/plugin_customizer-copyright.php:112
 msgid "Load scripts question"
 msgstr "Frage zum Laden von Skripten"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:88
-#: plugin_setup_data.php:40
+#: functions/customizer/childs/plugin_customizer-copyright.php:118
+#: plugin_setup_data.php:43
 msgid "Yes, I would like to activate the external scripts on this page..."
 msgstr "Ja, ich möchte die externen Skripte auf dieser Seite aktivieren..."
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:94
+#: functions/customizer/childs/plugin_customizer-copyright.php:124
 msgid "Load external Skripts"
 msgstr "Externe Skripte laden"
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:100
-#: plugin_setup_data.php:41
+#: functions/customizer/childs/plugin_customizer-copyright.php:130
+#: plugin_setup_data.php:44
 msgid "No, I do not like to activate the external scripts on this page..."
 msgstr ""
 "Nein, ich möchte die externen Skripte auf dieser Seite nicht aktivieren..."
 
-#: functions/customizer/childs/plugin_customizer-copyright.php:106
+#: functions/customizer/childs/plugin_customizer-copyright.php:136
 msgid "No external Skripts"
 msgstr "Keine externen Skripte"
 

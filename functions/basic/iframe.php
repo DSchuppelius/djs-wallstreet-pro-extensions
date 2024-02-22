@@ -18,7 +18,7 @@ function iframe_cookie_lazy_load($content) {
     $current_setup = Extensions_Plugin_Setup::instance();
     $actual_link = get_the_currentURL();
 
-    if (empty($content)) {
+    if (empty($content) || !$current_setup->get("cookieconsent_enabled")) {
         return $content;
     } else {
         libxml_use_internal_errors(true);
