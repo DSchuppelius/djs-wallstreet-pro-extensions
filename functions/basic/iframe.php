@@ -23,7 +23,7 @@ function iframe_cookie_lazy_load($content) {
     } else {
         libxml_use_internal_errors(true);
         $post = new DOMDocument();
-        $post->loadHTML(mb_convert_encoding($content, "HTML-ENTITIES", "UTF-8"));
+        $post->loadHTML(mb_encode_numericentity($content, [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8"));
         $iframes = $post->getElementsByTagName("iframe");
         if ((!isset($_COOKIE["cookieconsent_estatus"]) || $_COOKIE["cookieconsent_estatus"] != "allow") && !isWebBot()) {
             if (count($iframes) > 0 && !headers_sent()) {
@@ -40,15 +40,15 @@ function iframe_cookie_lazy_load($content) {
                 }
 
                 $disclaimer  = '<hr style="width:50%;text-align:center;margin:20px auto"><div class="cookies"><h3>'. esc_html__("Third-party cookies", DJS_EXTENSIONS_PLUGIN).'</h3><div class="inner cookies">';
-                $disclaimer .= '<p class="cookies justify"><b>'. esc_html__("Hint:", DJS_EXTENSIONS_PLUGIN).'</b> ' . mb_convert_encoding($current_setup->get("cookie_before"), 'HTML-ENTITIES') . "</p>";
-                $disclaimer .= '<form class="cookies center" action="' . $actual_link . '"><button class="btn" onclick="document.cookie=\'cookieconsent_estatus=allow;path=/;SameSite=Lax\'; location.reload(true);" type="button">' . mb_convert_encoding($current_setup->get("cookie_link"), 'HTML-ENTITIES') . '</button></form>';
-                $disclaimer .= '<p class="cookies justify">' . mb_convert_encoding($current_setup->get("cookie_after"), 'HTML-ENTITIES') . '</p></div></div>';
+                $disclaimer .= '<p class="cookies justify"><b>'. esc_html__("Hint:", DJS_EXTENSIONS_PLUGIN).'</b> ' . mb_encode_numericentity($current_setup->get("cookie_before"), [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8") . "</p>";
+                $disclaimer .= '<form class="cookies center" action="' . $actual_link . '"><button class="btn" onclick="document.cookie=\'cookieconsent_estatus=allow;path=/;SameSite=Lax\'; location.reload(true);" type="button">' . mb_encode_numericentity($current_setup->get("cookie_link"), [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8") . '</button></form>';
+                $disclaimer .= '<p class="cookies justify">' . mb_encode_numericentity($current_setup->get("cookie_after"), [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8") . '</p></div></div>';
                 $disclaimer .= '<div class="lcd crt"><a href="' . $src . '" target="_blank">' . $src . '</a></div><hr style="width:50%;text-align:center;margin:20px auto">';
 
                 $cookieNode = $post->createElement("div");
                 appendHTML($cookieNode, $disclaimer);
 
-                $sanbox = str_replace("allow-same-origin", "", $iframe->getAttribute("sandbox"));
+                $sandbox = str_replace("allow-same-origin", "", $iframe->getAttribute("sandbox"));
                 if (isset($sandbox)) {
                     $iframe->setAttribute("sandbox", $sandbox);
                 }
