@@ -8,6 +8,8 @@ wp.domReady(function () {
 
     // Add the style to the block toolbar
     const el = wp.element.createElement;
+    const { useState, useEffect } = wp.element;
+
     const justifyToolbarButton = wp.compose.createHigherOrderComponent((BlockEdit) => {
         return (props) => {
             if (props.name !== 'core/paragraph') {
@@ -15,13 +17,33 @@ wp.domReady(function () {
             }
 
             const { attributes, setAttributes } = props;
-            const { className } = attributes;
+            const { className = '' } = attributes; // Default to empty string if className is undefined
 
-            const hasJustifyClass = className && className.includes('has-text-align-justify');
+            // State to track justify class
+            const [hasJustifyClass, setHasJustifyClass] = useState(className.includes('has-text-align-justify'));
+
+            useEffect(() => {
+                const getAllClasses = () => {
+                    return className.split(' ').filter(Boolean);
+                };
+
+                const hasClass = getAllClasses().includes('has-text-align-justify');
+                setHasJustifyClass(hasClass);
+            }, [className]);
+
+            const hasOtherJustifyClasses = () => {
+                const paragraph = document.querySelector(`[data-block="${props.clientId}"]`);
+                if (paragraph) {
+                    const allClasses = Array.from(paragraph.classList);
+                    const hasParagraphJustifyClass = allClasses.includes('has-text-align-justify');
+                    return hasParagraphJustifyClass && !hasJustifyClass;
+                }
+                return false;
+            };
 
             const onChangeAlignment = () => {
                 const newClassName = hasJustifyClass
-                    ? className.replaceAll('has-text-align-justify', '').trim()
+                    ? className.replace(/\bhas-text-align-justify\b/, '').trim()
                     : (className ? className + ' has-text-align-justify' : 'has-text-align-justify');
 
                 setAttributes({ className: newClassName });
@@ -35,7 +57,10 @@ wp.domReady(function () {
                             icon: 'editor-justify',
                             label: 'Blocksatz',
                             isActive: hasJustifyClass,
-                            onClick: onChangeAlignment
+                            isDisabled: hasOtherJustifyClasses(),
+                            onClick: () => {
+                                onChangeAlignment();
+                            }
                         })
                     )
                 )
