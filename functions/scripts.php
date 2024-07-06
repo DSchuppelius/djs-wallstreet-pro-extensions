@@ -25,12 +25,21 @@ add_action('wp_enqueue_scripts', 'extensions_plugin_styles');
 function extensions_plugin_scripts() {
     $current_setup = Extensions_Plugin_Setup::instance();
 
-    wp_enqueue_script("extensions-popup",                               DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "/js/popup.js", ["jquery"]);
-
+    wp_enqueue_script("extensions-popup",                   DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/popup.js", ["jquery"]);
 
     if (!(defined("WP_ADMIN") && WP_ADMIN) && $current_setup->get("extensions_enabled")) {
         //TODO: Add Code
     }
 }
 add_action('wp_enqueue_scripts', 'extensions_plugin_scripts');
+
+function extensions_plugin_block_styles() {
+    wp_enqueue_style("extensions-style",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/style.css");
+}
+add_action('enqueue_block_assets', 'extensions_plugin_block_styles');
+
+function custom_justify_alignment_enqueue() {
+    wp_enqueue_script("justify-alignment",                  DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/justify-alignment.js", ['wp-blocks', 'wp-dom', 'wp-rich-text', 'wp-element', 'wp-editor']);
+}
+add_action('enqueue_block_editor_assets', 'custom_justify_alignment_enqueue');
 ?>
