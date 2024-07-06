@@ -21,7 +21,7 @@ wp.domReady(function () {
 
             const onChangeAlignment = () => {
                 const newClassName = hasJustifyClass
-                    ? className.replace('has-text-align-justify', '').trim()
+                    ? className.replaceAll('has-text-align-justify', '').trim()
                     : (className ? className + ' has-text-align-justify' : 'has-text-align-justify');
 
                 setAttributes({ className: newClassName });
