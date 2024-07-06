@@ -1,3 +1,11 @@
+/*
+ * Created on   : Fri Jul 5 2024
+ * Author       : Daniel Jörg Schuppelius
+ * Author Uri   : https://schuppelius.org
+ * Filename     : justify-alignment.js
+ * License      : GNU General Public License v3 or later
+ * License Uri  : http://www.gnu.org/licenses/gpl.html
+ */
 wp.domReady(function () {
     // Register the new block style
     wp.blocks.registerBlockStyle('core/paragraph', {
