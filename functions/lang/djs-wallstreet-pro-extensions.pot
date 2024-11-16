@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
-"POT-Creation-Date: 2024-02-22 10:02+0100\n"
+"POT-Creation-Date: 2024-11-14 09:36+0100\n"
 "PO-Revision-Date: 2024-02-05 23:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: extensions.php\n"
@@ -39,8 +39,12 @@ msgstr ""
 msgid "Hint:"
 msgstr ""
 
-#: functions/basic/jscript.php:30
+#: functions/basic/jscript.php:36
 msgid "Third-party scripts"
+msgstr ""
+
+#: functions/basic/jscript.php:37
+msgid "Close"
 msgstr ""
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:15

@@ -11,12 +11,13 @@ License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl.html
 Text Domain: djs-wallstreet-pro-extensions
 Domain Path: /functions/lang/
+Requires Plugins: djs-wallstreet-pro-core
 */
 defined('ABSPATH') or die('Hm, Are you ok?');
 
 require_once "functions.php";
 
-if (!class_exists('DJS_Wallstreet_Pro_Extensions')) {
+if (!class_exists('DJS_Wallstreet_Pro_Extensions') && class_exists('DJS_Base')) {
     final class DJS_Wallstreet_Pro_Extensions extends DJS_Base {
         private $customizers;
 
@@ -32,45 +33,22 @@ if (!class_exists('DJS_Wallstreet_Pro_Extensions')) {
                 $instance->includes();
                 $instance->setup_actions();
 
-                add_action('plugins_loaded', [$instance, 'load_textdomain']);
+                add_action('plugins_loaded', [$instance, 'load_plugin_textdomain']);
             }
 
             // Always return the instance
             return $instance;
         }
 
-        // Load plugin textdomain.
-        public function load_textdomain() {
-            $path = basename(dirname(__FILE__ )) . "/functions/lang";
-            $result = load_plugin_textdomain($this->plugin_name, false, $path);
-
-            if(defined('WP_DEBUG'))
-                if (!$result && WP_DEBUG)
-                    add_action('admin_notices', function() use ($path) {
-                        $locale = apply_filters('plugin_locale', get_locale(), $this->plugin_name);
-                    
-                        echo "<div class='notice'><p>" . sprintf(esc_html__("Could not find language file %s/%s-%s.mo.", $this->plugin_name), $path, $this->plugin_name, $locale) . "</p></div>";
-                    });
-        }
-
-        private function setup_globals() {
+        protected function setup_globals() {
+            parent::setup_globals();
             /** Versions **********************************************************/
             $this->version = '1.0.0';
             $this->db_version = 'none';
-
-            // Setup some base path and URL information
-            $this->file = __FILE__;
-            $this->basename = apply_filters('djs-wallstreet-pro-extensions_plugin_basenname', plugin_basename($this->file));
-            $this->plugin_dir = apply_filters('djs-wallstreet-pro-extensions_plugin_dir_path', plugin_dir_path($this->file));
-            $this->plugin_url = apply_filters('djs-wallstreet-pro-extensions_plugin_dir_url', plugin_dir_url($this->file));
-            $this->plugin_name = apply_filters('djs-wallstreet-pro-post-types_plugin_name', dirname($this->basename));
-
-            /** Paths *************************************************************/
-            $this->includes_dir = apply_filters('djs-wallstreet-pro-extensions_includes_dir', trailingslashit($this->plugin_dir . 'includes'));
-            $this->includes_url = apply_filters('djs-wallstreet-pro-extensions_includes_url', trailingslashit($this->plugin_url . 'includes'));
         }
 
         private function includes() {
+            error_log("includes ".$this->includes_dir);
             require($this->includes_dir . "shortcodes.php");
         }
 

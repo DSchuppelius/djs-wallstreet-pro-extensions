@@ -41,7 +41,7 @@ function iframe_cookie_lazy_load($content) {
 
                 $disclaimer  = '<hr style="width:50%;text-align:center;margin:20px auto"><div class="cookies"><h3>'. esc_html__("Third-party cookies", DJS_EXTENSIONS_PLUGIN).'</h3><div class="inner cookies">';
                 $disclaimer .= '<p class="cookies justify"><b>'. esc_html__("Hint:", DJS_EXTENSIONS_PLUGIN).'</b> ' . mb_encode_numericentity($current_setup->get("cookie_before"), [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8") . "</p>";
-                $disclaimer .= '<form class="cookies center" action="' . $actual_link . '"><button class="btn" onclick="document.cookie=\'cookieconsent_estatus=allow;path=/;SameSite=Lax\'; location.reload(true);" type="button">' . mb_encode_numericentity($current_setup->get("cookie_link"), [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8") . '</button></form>';
+                $disclaimer .= '<form class="cookies center" action="' . $actual_link . '"><button class="btn" onclick="document.cookie=\'cookieconsent_estatus=allow;path=/;SameSite=Lax' . (is_ssl() ? ';Secure' : '') . '\'; location.reload(true);" type="button">' . mb_encode_numericentity($current_setup->get("cookie_link"), [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8") . '</button></form>';
                 $disclaimer .= '<p class="cookies justify">' . mb_encode_numericentity($current_setup->get("cookie_after"), [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8") . '</p></div></div>';
                 $disclaimer .= '<div class="lcd crt"><a href="' . $src . '" target="_blank">' . $src . '</a></div><hr style="width:50%;text-align:center;margin:20px auto">';
 

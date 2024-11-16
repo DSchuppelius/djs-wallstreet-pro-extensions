@@ -10,18 +10,16 @@
 
 if (!defined('ABSPATH')) exit;
 
-require_once "djs_setup.php";
-
 if(!class_exists('Plugin_Setup')) {
     abstract class Plugin_Setup extends DJS_Setup {
         // A dummy magic method to prevent plugin from being cloned
         public function __clone() {
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', DJS_EXTENSIONS_PLUGIN), '1.0.0');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', DJS_EXTENSIONS_PLUGIN), $this->version);
         }
 
         // A dummy magic method to prevent plugin from being unserialized
         public function __wakeup() {
-            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', DJS_EXTENSIONS_PLUGIN), '1.0.0');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', DJS_EXTENSIONS_PLUGIN), $this->version);
         }
     }
 }

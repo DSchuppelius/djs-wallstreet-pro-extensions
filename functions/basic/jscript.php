@@ -24,11 +24,40 @@ if ($current_setup->get("scriptconsent_enabled")) {
     }
     add_action("wp_enqueue_scripts", "script_cookie_lazy_load", 15);
 
-    function show_scriptconsent(){
-        $current_setup = Extensions_Plugin_Setup::instance();
-        $actual_link = get_the_currentURL();
-        echo '<div id="script_fullscreen" class="open"><div class="title_row"><h3>'. esc_html__("Third-party scripts", DJS_EXTENSIONS_PLUGIN).'</h3><button type="button" class="not close material-icons">close</button></div><p>' . mb_convert_encoding($current_setup->get("script_before"), 'HTML-ENTITIES') . '</p>';
-        echo '<form class="script center" action="' . $actual_link . '"><button class="btn ok" onclick="document.cookie=\'scriptconsent_estatus=allow;path=/;SameSite=Lax\'; location.reload(true);" type="button">' . mb_convert_encoding($current_setup->get("script_link"), 'HTML-ENTITIES') . '</button> <button class="btn no" onclick="document.cookie=\'scriptconsent_estatus=dismiss;path=/;SameSite=Lax\'; location.reload(true);" type="button">' . mb_convert_encoding($current_setup->get("noscript_link"), 'HTML-ENTITIES') . '</button></form>';
-        echo "</div>";
-    }
+function show_scriptconsent() {
+    $current_setup = Extensions_Plugin_Setup::instance();
+    $actual_link = esc_url( home_url( add_query_arg( null, null ) ) );
+
+    // Öffnen des Containers
+    echo '<div id="script_fullscreen" class="open" role="dialog" aria-labelledby="script_title">';
+
+    // Titelzeile
+    echo '<div class="title_row">';
+    echo '<h3 id="script_title">' . esc_html__("Third-party scripts", DJS_EXTENSIONS_PLUGIN) . '</h3>';
+    echo '<button type="button" class="not close material-icons" aria-label="' . esc_attr__("Close", DJS_EXTENSIONS_PLUGIN) . '" onclick="document.getElementById(\'script_fullscreen\').classList.remove(\'open\');">close</button>';
+    echo '</div>';
+
+    // Beschreibung
+    echo '<p>' . wp_kses_post($current_setup->get("script_before")) . '</p>';
+
+    // Formular
+    echo '<form class="script center" action="' . esc_url($actual_link) . '">';
+
+    // "Erlauben"-Button
+    echo '<button class="btn ok" type="button" onclick="document.cookie=\'scriptconsent_estatus=allow;path=/;SameSite=Lax' . (is_ssl() ? ';Secure' : '') . '\'; location.reload(true);">';
+    echo esc_html($current_setup->get("script_link"));
+    echo '</button> ';
+
+    // "Ablehnen"-Button
+    echo '<button class="btn no" type="button" onclick="document.cookie=\'scriptconsent_estatus=dismiss;path=/;SameSite=Lax' . (is_ssl() ? ';Secure' : '') . '\'; location.reload(true);">';
+    echo esc_html($current_setup->get("noscript_link"));
+    echo '</button>';
+
+    // Formular schließen
+    echo '</form>';
+
+    // Container schließen
+    echo '</div>';
+}
+
 }

@@ -20,19 +20,21 @@ if (!defined('DJS_EXTENSIONS_PLUGIN_DIR')) {
     return;
 }
 
-require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "base/web_functions.php";
+if (defined('DJS_CORE_PLUGIN_CLASSES_PATH') && file_exists(DJS_CORE_PLUGIN_CLASSES_PATH . 'djs_base.php')) {
+    require_once DJS_CORE_PLUGIN_CLASSES_PATH . "djs_base.php";
 
-require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_setup.php");
+    require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_setup.php");
 
-require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_functions.php");
-require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "plugin/plugin_sanitizer.php");
+    require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/iframe.php";
+    require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/jscript.php";
 
-require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/iframe.php";
-require_once DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "basic/jscript.php";
+    require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/plugin_customizer.php");
+    require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/childs/plugin_customizer-global.php");
+    require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/childs/plugin_customizer-copyright.php");
 
-require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/plugin_customizer.php");
-require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/childs/plugin_customizer-global.php");
-require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "customizer/childs/plugin_customizer-copyright.php");
-
-require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "scripts.php");
+    require_once(DJS_EXTENSIONS_PLUGIN_FUNCTIONS_PATH . "scripts.php");
+} else {
+    add_action('admin_init', function () { if (function_exists('deactivate_plugins')) { deactivate_plugins(DJS_EXTENSIONS_PLUGIN.'/extensions.php'); wp_cache_flush(); } });
+    add_action('admin_notices', function () { echo '<div class="notice notice-error"><p>' . esc_html__('The DJS-Wallstreet-Pro Core plugin is required for this plugin.', DJS_EXTENSIONS_PLUGIN) . '</p></div>'; });
+}
 ?>
