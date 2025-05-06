@@ -53,7 +53,7 @@ function akismet_spam_counter($atts, $content=null) {
     if(!empty($content)) $result .= $content;
 
     if(is_plugin_active('akismet/akismet.php')) {
-        $result .= esc_html(number_format_i18n(get_site_option('akismet_spam_count'))) . " " . esc_html__("messages", DJS_EXTENSIONS_PLUGIN);
+        $result .= esc_html(number_format_i18n(get_option('akismet_spam_count'))) . " " . esc_html__("messages", DJS_EXTENSIONS_PLUGIN);
     } else {
         $result .= esc_html__("nonexistent", DJS_EXTENSIONS_PLUGIN);
     }
