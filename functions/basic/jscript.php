@@ -49,7 +49,7 @@ function show_scriptconsent() {
     echo '</button> ';
 
     // "Ablehnen"-Button
-    echo '<button class="btn no" type="button" onclick="document.cookie=\'scriptconsent_estatus=dismiss;path=/;SameSite=Lax' . (is_ssl() ? ';Secure' : '') . '\'; location.reload(true);">';
+    echo '<button class="btn no" type="button" onclick="document.cookie=\'scriptconsent_estatus=dismiss;path=/;SameSite=Lax' . (is_ssl() ? ';Secure' : '') . '\';">';
     echo esc_html($current_setup->get("noscript_link"));
     echo '</button>';
     echo '<button class="btn all-ok" onclick="document.cookie=\'cookieconsent_estatus=allow;path=/;SameSite=Lax' . (is_ssl() ? ';Secure' : '') . '\'; document.cookie=\'scriptconsent_estatus=dismiss;path=/;SameSite=Lax' . (is_ssl() ? ';Secure' : '') . '\'; location.reload(true);" type="button">' . mb_encode_numericentity($current_setup->get("script_cookie_link"), [0x80, 0x10FFFF, 0, 0x10FFFF], "UTF-8") . '</button>';
