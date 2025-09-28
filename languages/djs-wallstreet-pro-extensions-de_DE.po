@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
-"POT-Creation-Date: 2025-09-28 09:28+0200\n"
-"PO-Revision-Date: 2025-09-28 09:29+0200\n"
+"POT-Creation-Date: 2025-09-28 10:04+0200\n"
+"PO-Revision-Date: 2025-09-28 10:05+0200\n"
 "Last-Translator: Daniel Jörg Schuppelius <info@daniel-schuppelius.de>\n"
 "Language-Team: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
 "Language: de_DE\n"
@@ -212,14 +212,18 @@ msgstr "Keine externen Skripte"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:142
 #: plugin_setup_data.php:60
-msgid "I want to accept the third-party cookies and the external scripts."
+msgid ""
+"I want to accept the third-party cookies, the external content and the "
+"external scripts."
 msgstr ""
-"Ich möchte die Cookies von Drittanbietern und die externen Skripte "
-"akzeptieren."
+"Ich möchte die Cookies von Drittanbietern, die externen Inhalte und die "
+"externen Skripte akzeptieren."
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:148
-msgid "Accept third-party cookies and external scripts"
-msgstr "Akzeptieren Sie Cookies von Drittanbietern und externe Skripte"
+msgid "Accept third-party cookies, external content and external scripts"
+msgstr ""
+"Akzeptieren Sie Cookies von Drittanbietern, externe Inhalte und externe "
+"Skripte"
 
 #: functions/customizer/childs/plugin_customizer-global.php:13
 msgid "Extension options"
