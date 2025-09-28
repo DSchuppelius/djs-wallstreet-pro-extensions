@@ -26,6 +26,7 @@ function extensions_plugin_scripts() {
     $current_setup = Extensions_Plugin_Setup::instance();
 
     wp_enqueue_script("extensions-popup",                   DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/popup.js", ["jquery"]);
+    wp_enqueue_script("cookie",                             DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/cookie.js");
 
     if (!(defined("WP_ADMIN") && WP_ADMIN) && $current_setup->get("extensions_enabled")) {
         //TODO: Add Code

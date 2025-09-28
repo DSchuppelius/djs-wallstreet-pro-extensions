@@ -138,14 +138,26 @@ class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
             "type" => "textarea",
         ]);
 
-                $wp_customize->add_setting($this->theme_options_name . "[script_cookie_link]", [
-            "default" => esc_html__("I want to accept the third-party cookies, the external content and the external scripts.", DJS_EXTENSIONS_PLUGIN),
+        $wp_customize->add_setting($this->theme_options_name . "[script_cookie_link]", [
+            "default" => esc_html__("Yes, I want to accept the third-party cookies, the external content and the external scripts.", DJS_EXTENSIONS_PLUGIN),
             "sanitize_callback" => "sanitize_link_field",
             "type" => "option",
         ]);
 
         $wp_customize->add_control($this->theme_options_name . "[script_cookie_link]", [
             "label" => esc_html__("Accept third-party cookies, external content and external scripts", DJS_EXTENSIONS_PLUGIN),
+            "section" => "script_section",
+            "type" => "textarea",
+        ]);
+
+        $wp_customize->add_setting($this->theme_options_name . "[script_cookie_nolink]", [
+            "default" => esc_html__("No, I do not want to accept the third-party cookies, the external content and the external scripts.", DJS_EXTENSIONS_PLUGIN),
+            "sanitize_callback" => "sanitize_link_field",
+            "type" => "option",
+        ]);
+
+        $wp_customize->add_control($this->theme_options_name . "[script_cookie_nolink]", [
+            "label" => esc_html__("Decline third-party cookies, external content and external scripts", DJS_EXTENSIONS_PLUGIN),
             "section" => "script_section",
             "type" => "textarea",
         ]);
