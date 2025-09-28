@@ -25,8 +25,8 @@ if ($current_setup->get("scriptconsent_enabled")) {
     add_action("wp_enqueue_scripts", "script_cookie_lazy_load", 15);
 
     add_action('wp_footer', function() {
-        echo '<button id="cookie-settings" class="not cookie-settings-btn material-icons"
-                    onclick="toggleScriptConsent();">cookie</button>';
+        echo '<div class="cookie-control"><button id="cookie-settings" class="not cookie-settings-btn material-icons"
+                    onclick="toggleScriptConsent();">cookie</button></div>';
     });
 
 function show_scriptconsent() {
