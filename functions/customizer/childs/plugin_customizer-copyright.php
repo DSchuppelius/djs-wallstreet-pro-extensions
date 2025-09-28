@@ -113,7 +113,7 @@ class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
             "section" => "script_section",
             "type" => "textarea",
         ]);
-        
+
         $wp_customize->add_setting($this->theme_options_name . "[script_link]", [
             "default" => esc_html__("Yes, I would like to activate the external scripts on this page...", DJS_EXTENSIONS_PLUGIN),
             "sanitize_callback" => "sanitize_link_field",
@@ -125,7 +125,7 @@ class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
             "section" => "script_section",
             "type" => "textarea",
         ]);
-        
+
         $wp_customize->add_setting($this->theme_options_name . "[noscript_link]", [
             "default" => esc_html__("No, I do not like to activate the external scripts on this page...", DJS_EXTENSIONS_PLUGIN),
             "sanitize_callback" => "sanitize_link_field",
@@ -134,6 +134,18 @@ class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
 
         $wp_customize->add_control($this->theme_options_name . "[noscript_link]", [
             "label" => esc_html__("No external Skripts", DJS_EXTENSIONS_PLUGIN),
+            "section" => "script_section",
+            "type" => "textarea",
+        ]);
+
+                $wp_customize->add_setting($this->theme_options_name . "[script_cookie_link]", [
+            "default" => esc_html__("I want to accept the third-party cookies and the external scripts.", DJS_EXTENSIONS_PLUGIN),
+            "sanitize_callback" => "sanitize_link_field",
+            "type" => "option",
+        ]);
+
+        $wp_customize->add_control($this->theme_options_name . "[script_cookie_link]", [
+            "label" => esc_html__("Accept third-party cookies and external scripts", DJS_EXTENSIONS_PLUGIN),
             "section" => "script_section",
             "type" => "textarea",
         ]);

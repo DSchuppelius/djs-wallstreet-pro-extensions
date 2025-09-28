@@ -42,6 +42,7 @@ class Extensions_Plugin_Setup extends Plugin_Setup {
             "script_before" => 'This site uses third-party program code that may allow conclusions to be drawn about your user behavior. Some of these program codes are loaded from external servers. We use this code to determine what content is of interest to you or to make the behavior and appearance of this website more pleasant for you. Would you like to support us and unlock these external scripts and styles? You can find more information about the use of data on these websites on the following pages: <a href="/imprint">Imprint</a>, <a href="/privacy_policy">Privacy policy</a>. Do you have any further questions on this topic? Write me via the <a href="/"contact">contact form</a> or by e-mail (<a href="mailto:info@schuppelius.org" >info@schuppelius.org</a>)',
             "script_link" => "Yes, I would like to activate the external scripts on this page...",
             "noscript_link" => "No, I do not like to activate the external scripts on this page...",
+            "script_cookie_link" => "I want to accept the third-party cookies and the external scripts.",
         ];
     }
 
@@ -56,6 +57,7 @@ class Extensions_Plugin_Setup extends Plugin_Setup {
             "script_before" => esc_html__("This site uses third-party program code that may allow conclusions to be drawn about your user behavior. Some of these program codes are loaded from external servers. We use this code to determine what content is of interest to you or to make the behavior and appearance of this website more pleasant for you. Would you like to support us and unlock these external scripts and styles? You can find more information about the use of data on these websites on the following pages:", DJS_EXTENSIONS_PLUGIN) . ' <a href="/' . urlencode(strtolower(esc_html__("Imprint", DJS_EXTENSIONS_PLUGIN))) . '">' . esc_html__("Imprint", DJS_EXTENSIONS_PLUGIN) . '</a>, <a href="/' . urlencode(remove_umlaut(strtolower(esc_html__("Privacy policy", DJS_EXTENSIONS_PLUGIN)))) . '">' . esc_html__("Privacy policy", DJS_EXTENSIONS_PLUGIN) . '</a>. ' . esc_html__("Do you have any further questions on this topic? Write me via the", DJS_EXTENSIONS_PLUGIN).' <a href="/' . urlencode(strtolower(esc_html__("contact", DJS_EXTENSIONS_PLUGIN))) . '">' . esc_html__("contact form", DJS_EXTENSIONS_PLUGIN) . '</a> ' . esc_html__("or by e-mail", DJS_EXTENSIONS_PLUGIN) . ' (<a href="mailto:info@schuppelius.org" >info@schuppelius.org</a>)',
             "script_link" => esc_html__("Yes, I would like to activate the external scripts on this page...", DJS_EXTENSIONS_PLUGIN),
             "noscript_link" => esc_html__("No, I do not like to activate the external scripts on this page...", DJS_EXTENSIONS_PLUGIN),
+            "script_cookie_link" => esc_html__("I want to accept the third-party cookies and the external scripts.", DJS_EXTENSIONS_PLUGIN),
         ];
     }
 }

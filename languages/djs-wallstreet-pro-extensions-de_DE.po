@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: DJS-Wallstreet-Pro Extensions\n"
-"POT-Creation-Date: 2024-11-14 09:36+0100\n"
-"PO-Revision-Date: 2024-11-14 09:37+0100\n"
-"Last-Translator: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
+"POT-Creation-Date: 2025-09-28 09:28+0200\n"
+"PO-Revision-Date: 2025-09-28 09:29+0200\n"
+"Last-Translator: Daniel Jörg Schuppelius <info@daniel-schuppelius.de>\n"
 "Language-Team: Daniel Jörg Schuppelius <info@schuppelius.org>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -21,16 +21,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: extensions.php:52
-#, php-format
-msgid "Could not find language file %s/%s-%s.mo."
-msgstr "Sprachdatei %s/%s-%s.mo konnte nicht gefunden werden."
-
 #: functions.php:19
 #, php-format
 msgid "%s detected a conflict; please deactivate the plugin located in %s."
 msgstr ""
 "%s hat einen Konflikt festgestellt; Bitte deaktivieren Sie das Plugin in %s."
+
+#: functions.php:38
+msgid "The DJS-Wallstreet-Pro Core plugin is required for this plugin."
+msgstr "Für dieses Plugin wird das DJS-Wallstreet-Pro Core Plugin benötigt."
 
 #: functions/basic/iframe.php:42
 msgid "Third-party cookies"
@@ -71,7 +70,7 @@ msgstr ""
 "Medien wünschen"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:55
-#: plugin_setup_data.php:38
+#: plugin_setup_data.php:53
 msgid ""
 "This hidden content may leave traces of third-party vendors on your computer "
 "when activated. Perhaps your user behavior could be analyzed via these "
@@ -88,38 +87,38 @@ msgstr ""
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:55
 #: functions/customizer/childs/plugin_customizer-copyright.php:106
-#: plugin_setup_data.php:38 plugin_setup_data.php:42
+#: plugin_setup_data.php:53 plugin_setup_data.php:57
 msgid "Imprint"
 msgstr "Impressum"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:55
 #: functions/customizer/childs/plugin_customizer-copyright.php:106
-#: plugin_setup_data.php:38 plugin_setup_data.php:42
+#: plugin_setup_data.php:53 plugin_setup_data.php:57
 msgid "Privacy policy"
 msgstr "Datenschutzerkl&auml;rung"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:55
 #: functions/customizer/childs/plugin_customizer-copyright.php:106
-#: plugin_setup_data.php:38 plugin_setup_data.php:42
+#: plugin_setup_data.php:53 plugin_setup_data.php:57
 msgid "Do you have any further questions on this topic? Write me via the"
 msgstr ""
 "Haben Sie weitere Fragen zu diesem Thema? Schreiben Sie mir &uuml;ber das"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:55
 #: functions/customizer/childs/plugin_customizer-copyright.php:106
-#: plugin_setup_data.php:38 plugin_setup_data.php:42
+#: plugin_setup_data.php:53 plugin_setup_data.php:57
 msgid "contact"
 msgstr "Kontakt"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:55
 #: functions/customizer/childs/plugin_customizer-copyright.php:106
-#: plugin_setup_data.php:38 plugin_setup_data.php:42
+#: plugin_setup_data.php:53 plugin_setup_data.php:57
 msgid "contact form"
 msgstr "Kontaktformular"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:55
 #: functions/customizer/childs/plugin_customizer-copyright.php:106
-#: plugin_setup_data.php:38 plugin_setup_data.php:42
+#: plugin_setup_data.php:53 plugin_setup_data.php:57
 msgid "or by e-mail"
 msgstr "oder per E-Mail"
 
@@ -128,7 +127,7 @@ msgid "Cookietext before button"
 msgstr "Mitteilung vor Cookie-Schaltfläche"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:67
-#: plugin_setup_data.php:39
+#: plugin_setup_data.php:54
 msgid "Yes, I would like to activate the content on this page..."
 msgstr "Ja, ich m&ouml;chte den Inhalt auf dieser Seite aktivieren..."
 
@@ -137,7 +136,7 @@ msgid "Buttontext"
 msgstr "Schaltflächentext"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:79
-#: plugin_setup_data.php:40
+#: plugin_setup_data.php:55
 msgid ""
 "Furthermore, you are aware that by activating the content, cookies can be "
 "set by third parties. In addition, you are aware that your data processing "
@@ -169,7 +168,7 @@ msgstr ""
 "Skripte verwenden möchten"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:106
-#: plugin_setup_data.php:42
+#: plugin_setup_data.php:57
 msgid ""
 "This site uses third-party program code that may allow conclusions to be "
 "drawn about your user behavior. Some of these program codes are loaded from "
@@ -193,7 +192,7 @@ msgid "Load scripts question"
 msgstr "Frage zum Laden von Skripten"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:118
-#: plugin_setup_data.php:43
+#: plugin_setup_data.php:58
 msgid "Yes, I would like to activate the external scripts on this page..."
 msgstr "Ja, ich möchte die externen Skripte auf dieser Seite aktivieren..."
 
@@ -202,7 +201,7 @@ msgid "Load external Skripts"
 msgstr "Externe Skripte laden"
 
 #: functions/customizer/childs/plugin_customizer-copyright.php:130
-#: plugin_setup_data.php:44
+#: plugin_setup_data.php:59
 msgid "No, I do not like to activate the external scripts on this page..."
 msgstr ""
 "Nein, ich möchte die externen Skripte auf dieser Seite nicht aktivieren..."
@@ -210,6 +209,17 @@ msgstr ""
 #: functions/customizer/childs/plugin_customizer-copyright.php:136
 msgid "No external Skripts"
 msgstr "Keine externen Skripte"
+
+#: functions/customizer/childs/plugin_customizer-copyright.php:142
+#: plugin_setup_data.php:60
+msgid "I want to accept the third-party cookies and the external scripts."
+msgstr ""
+"Ich möchte die Cookies von Drittanbietern und die externen Skripte "
+"akzeptieren."
+
+#: functions/customizer/childs/plugin_customizer-copyright.php:148
+msgid "Accept third-party cookies and external scripts"
+msgstr "Akzeptieren Sie Cookies von Drittanbietern und externe Skripte"
 
 #: functions/customizer/childs/plugin_customizer-global.php:13
 msgid "Extension options"
@@ -227,8 +237,7 @@ msgstr "Laden symbolischer Schriftarten"
 msgid "enable if some icons are not displayed"
 msgstr "Aktivieren, wenn einige Symbole nicht angezeigt werden"
 
-#: functions/plugin/djs_base.php:47 functions/plugin/djs_base.php:52
-#: functions/plugin/plugin_setup.php:19 functions/plugin/plugin_setup.php:24
+#: functions/plugin/plugin_setup.php:17 functions/plugin/plugin_setup.php:22
 msgid "Cheatin&#8217; huh?"
 msgstr "Sie schummeln&#8217; oder?"
 
@@ -252,7 +261,7 @@ msgstr "nicht vorhanden"
 msgid "messages"
 msgstr "Nachrichten"
 
-#: plugin_setup_data.php:31
+#: plugin_setup_data.php:51
 msgid "jS F Y"
 msgstr "d. F Y"
 
@@ -276,6 +285,10 @@ msgstr "Daniel Jörg Schuppelius"
 #. Author URI of the plugin/theme
 msgid "https://schuppelius.org"
 msgstr "https://schuppelius.org/"
+
+#, php-format
+#~ msgid "Could not find language file %s/%s-%s.mo."
+#~ msgstr "Sprachdatei %s/%s-%s.mo konnte nicht gefunden werden."
 
 #~ msgid "AngularJS options"
 #~ msgstr "AngularJS-Optionen"
