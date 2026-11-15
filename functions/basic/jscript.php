@@ -12,7 +12,8 @@ $current_setup = Extensions_Plugin_Setup::instance();
 if ($current_setup->get("scriptconsent_enabled")) {
     function script_cookie_lazy_load() {
         $wp_scripts = wp_scripts();
-        if ((!isset($_COOKIE["scriptconsent_estatus"])) && !isWebBot()) {
+        // Fremdskripte nur mit ausdruecklicher Zustimmung laden ("dismiss" blockiert weiter)
+        if ((!isset($_COOKIE["scriptconsent_estatus"]) || $_COOKIE["scriptconsent_estatus"] !== "allow") && !isWebBot()) {
             foreach ($wp_scripts->registered as $jscript) {
                 if (!$jscript->src || str_contains($jscript->src, $_SERVER["HTTP_HOST"]) || str_starts_with($jscript->src, "/"))
                     continue;

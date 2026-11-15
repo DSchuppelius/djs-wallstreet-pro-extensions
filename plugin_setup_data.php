@@ -32,6 +32,8 @@ class Extensions_Plugin_Setup extends Plugin_Setup {
 
             "cookieconsent_enabled" => false,
             "scriptconsent_enabled" => false,
+            // Gueltigkeit der Einwilligungs-Cookies in Tagen, 0 = bis zum Schliessen des Browsers
+            "consent_cookie_days" => 0,
 
             "symbolfonts_enabled" => false,
 

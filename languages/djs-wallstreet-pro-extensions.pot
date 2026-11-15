@@ -277,3 +277,11 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://schuppelius.org"
 msgstr ""
+
+#: functions/customizer/childs/plugin_customizer-copyright.php
+msgid "Consent duration (days)"
+msgstr ""
+
+#: functions/customizer/childs/plugin_customizer-copyright.php
+msgid "How long a consent decision is remembered. 0 = until the browser is closed (session cookie). Applies to external scripts and external content - keep it in line with your privacy policy."
+msgstr ""

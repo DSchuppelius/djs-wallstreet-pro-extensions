@@ -17,7 +17,9 @@ jQuery(document).ready(function () {
             event.target.className == "not close material-icons" ||
             event.keyCode == 27
         ) {
-            jQuery(this).removeClass("open");
+            // Schliessen ohne Auswahl = Ablehnung (cookie.js)
+            if (typeof closeScriptConsent === "function") closeScriptConsent();
+            else jQuery("#script_fullscreen").removeClass("open");
         }
     });
 });

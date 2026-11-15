@@ -409,3 +409,11 @@ msgstr "https://schuppelius.org/"
 
 #~ msgid "Adds AngularJS-Options to WordPress"
 #~ msgstr "Fügt AngularJS-Optionen zu WordPress hinzu"
+
+#: functions/customizer/childs/plugin_customizer-copyright.php
+msgid "Consent duration (days)"
+msgstr "Gültigkeit der Einwilligung (Tage)"
+
+#: functions/customizer/childs/plugin_customizer-copyright.php
+msgid "How long a consent decision is remembered. 0 = until the browser is closed (session cookie). Applies to external scripts and external content - keep it in line with your privacy policy."
+msgstr "Wie lange eine Entscheidung in den Einwilligungsdialogen gespeichert bleibt. 0 = bis zum Schließen des Browsers (Sitzungs-Cookie). Gilt für externe Skripte und externe Inhalte - bitte mit der Datenschutzerklärung abstimmen."

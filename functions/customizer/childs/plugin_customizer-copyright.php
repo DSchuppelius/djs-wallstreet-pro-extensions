@@ -102,6 +102,22 @@ class Plugin_Extension_Copyright_Customizer extends Plugin_Customizer {
             "description" => esc_html__("enable if you want a disclaimer on external scripts", DJS_EXTENSIONS_PLUGIN),
         ]);
 
+        $wp_customize->add_setting($this->theme_options_name . "[consent_cookie_days]", [
+            "default" => 0,
+            "capability" => "edit_theme_options",
+            "sanitize_callback" => static fn($value) => min(365, absint($value)),
+            "type" => "option",
+        ]);
+
+        $wp_customize->add_control($this->theme_options_name . "[consent_cookie_days]", [
+            "label" => esc_html__("Consent duration (days)", DJS_EXTENSIONS_PLUGIN),
+            "section" => "script_section",
+            "type" => "number",
+            "priority" => 110,
+            "input_attrs" => ["min" => 0, "max" => 365, "step" => 1],
+            "description" => esc_html__("How long a consent decision is remembered. 0 = until the browser is closed (session cookie). Applies to external scripts and external content - keep it in line with your privacy policy.", DJS_EXTENSIONS_PLUGIN),
+        ]);
+
         $wp_customize->add_setting($this->theme_options_name . "[script_before]", [
             "default" => esc_html__("This site uses third-party program code that may allow conclusions to be drawn about your user behavior. Some of these program codes are loaded from external servers. We use this code to determine what content is of interest to you or to make the behavior and appearance of this website more pleasant for you. Would you like to support us and unlock these external scripts and styles? You can find more information about the use of data on these websites on the following pages:", DJS_EXTENSIONS_PLUGIN) . ' <a href="/' . urlencode(strtolower(esc_html__("Imprint", DJS_EXTENSIONS_PLUGIN))) . '">' . esc_html__("Imprint", DJS_EXTENSIONS_PLUGIN) . '</a>, <a href="/' . urlencode(remove_umlaut(strtolower(esc_html__("Privacy policy", DJS_EXTENSIONS_PLUGIN)))) . '">' . esc_html__("Privacy policy", DJS_EXTENSIONS_PLUGIN) . '</a>. ' . esc_html__("Do you have any further questions on this topic? Write me via the", DJS_EXTENSIONS_PLUGIN).' <a href="/' . urlencode(strtolower(esc_html__("contact", DJS_EXTENSIONS_PLUGIN))) . '">' . esc_html__("contact form", DJS_EXTENSIONS_PLUGIN) . '</a> ' . esc_html__("or by e-mail", DJS_EXTENSIONS_PLUGIN) . ' (<a href="mailto:' . $current_setup->get("contact_email_number_one") . '" >' . $current_setup->get("contact_email_number_one") . "</a>)",
             "sanitize_callback" => "sanitize_link_field",
