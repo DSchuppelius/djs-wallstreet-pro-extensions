@@ -7,26 +7,35 @@
  * License      : GNU General Public License v3 or later
  * License Uri  : http://www.gnu.org/licenses/gpl.html
  */
+
+// Version = Aenderungszeit der Datei: Browser laden geaenderte Skripte/Styles sofort neu, statt eine
+// alte Fassung aus dem Cache zu nehmen (ohne Versionsangabe teils wochenlang).
+function extensions_asset_ver(string $relative) {
+    $mtime = @filemtime(DJS_EXTENSIONS_PLUGIN_ASSETS_PATH . $relative);
+    return $mtime ? (string) $mtime : null;
+}
+
 function extensions_plugin_styles() {
     $current_setup = Extensions_Plugin_Setup::instance();
 
     if($current_setup->get("symbolfonts_enabled")) {
-        wp_enqueue_style("font-awesome",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font-awesome/css/all.min.css");
-        wp_enqueue_style("icon_font-faces",                 DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/icon_font-faces.css");
+        wp_enqueue_style("font-awesome",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font-awesome/css/all.min.css", [], extensions_asset_ver("css/fonts/font-awesome/css/all.min.css"));
+        wp_enqueue_style("icon_font-faces",                 DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/icon_font-faces.css", [], extensions_asset_ver("css/fonts/icon_font-faces.css"));
     }
 
-    wp_enqueue_style("extensions-font",                     DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font.css");
+    wp_enqueue_style("extensions-font",                     DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/fonts/font.css", [], extensions_asset_ver("css/fonts/font.css"));
 
-    wp_enqueue_style("extensions-embed",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/embed.css");
-    wp_enqueue_style("extensions-popup",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/popup.css");
+    wp_enqueue_style("extensions-embed",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/embed.css", [], extensions_asset_ver("css/embed.css"));
+    wp_enqueue_style("extensions-popup",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/popup.css", [], extensions_asset_ver("css/popup.css"));
     }
 add_action('wp_enqueue_scripts', 'extensions_plugin_styles');
 
 function extensions_plugin_scripts() {
     $current_setup = Extensions_Plugin_Setup::instance();
 
-    wp_enqueue_script("extensions-popup",                   DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/popup.js", ["jquery"]);
-    wp_enqueue_script("cookie",                             DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/cookie.js");
+    wp_enqueue_script("extensions-popup",                   DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/popup.js", ["jquery"], extensions_asset_ver("js/popup.js"));
+    wp_enqueue_script("cookie",                             DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/cookie.js", [], extensions_asset_ver("js/cookie.js"));
+    wp_add_inline_script("cookie", "var djsConsentCookieDays = " . min(365, absint($current_setup->get("consent_cookie_days"))) . ";", "before");
 
     if (!(defined("WP_ADMIN") && WP_ADMIN) && $current_setup->get("extensions_enabled")) {
         //TODO: Add Code
@@ -35,12 +44,12 @@ function extensions_plugin_scripts() {
 add_action('wp_enqueue_scripts', 'extensions_plugin_scripts');
 
 function extensions_plugin_block_styles() {
-    wp_enqueue_style("extensions-style",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/style.css");
+    wp_enqueue_style("extensions-style",                    DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "css/style.css", [], extensions_asset_ver("css/style.css"));
 }
 add_action('enqueue_block_assets', 'extensions_plugin_block_styles');
 
 function custom_justify_alignment_enqueue() {
-    wp_enqueue_script("justify-alignment",                  DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/justify-alignment.js", ['wp-blocks', 'wp-dom', 'wp-rich-text', 'wp-element', 'wp-editor']);
+    wp_enqueue_script("justify-alignment",                  DJS_EXTENSIONS_PLUGIN_ASSETS_PATH_URI . "js/justify-alignment.js", ['wp-blocks', 'wp-dom', 'wp-rich-text', 'wp-element', 'wp-editor'], extensions_asset_ver("js/justify-alignment.js"));
 }
 add_action('enqueue_block_editor_assets', 'custom_justify_alignment_enqueue');
 ?>
