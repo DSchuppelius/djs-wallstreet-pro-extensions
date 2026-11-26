@@ -24,4 +24,16 @@ if(!class_exists('Plugin_Setup')) {
     }
 }
 
+if (!function_exists("djs_extensions_page_path")) {
+    /**
+     * Pfad einer Seite aus ihrem (uebersetzten) Titel, wie WordPress den Slug bildet:
+     * "Datenschutzerklärung" -> /datenschutzerklaerung, "Privacy policy" -> /privacy-policy.
+     * Uebersetzungen enthalten teils HTML-Entitaeten ("Datenschutzerkl&auml;rung") - erst dekodieren,
+     * sonst bleiben die Umlaute stehen und der Link endet auf "%26auml%3B".
+     */
+    function djs_extensions_page_path(string $title): string {
+        return "/" . sanitize_title(remove_umlaut(html_entity_decode($title, ENT_QUOTES | ENT_HTML5, "UTF-8")));
+    }
+}
+
 require_once(DJS_EXTENSIONS_PLUGIN_DIR . "plugin_setup_data.php"); ?>
